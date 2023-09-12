@@ -18,7 +18,9 @@ contract SimpleStorage {
     People[] public people;
 
     //function assigning value to the variable
-    function store(uint256 _favouriteNumber) public {
+    //In order to make overridable function we need to make it virtual.
+    //so, that it can we override by child function.
+    function store(uint256 _favouriteNumber) public virtual {
         favouriteNumber = _favouriteNumber;
     }
 

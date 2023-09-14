@@ -5,7 +5,7 @@ module.exports = {
   solidity: "0.8.8",
 };
 
-// // This is package.json default file
+// // This is package.json default file for reference
 // {
 //   "name": "simple-storage-resolve",
 //   "version": "1.0.0",

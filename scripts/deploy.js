@@ -10,7 +10,7 @@ async function main() {
   //Creating
   const SimpleStorage = await ethers.getContractFactory("SimpleStorage");
   //Deploying Contract
-  console.log("Deploying Contract");
+  console.log("Deploying Contract....");
   const simpleStorage = await SimpleStorage.deploy();
   await simpleStorage.deployed();
   console.log(`deploying contract at:${simpleStorage.address}\n`);
@@ -18,9 +18,19 @@ async function main() {
   //runing verify funcition, only on live network, in our case sepolia, not in hardhat network.
   if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
     //we are waiting 6 block confermation so the transaction is properly registered on the network, to be recognized
+    console.log("waiting for block Confirmation");
     await simpleStorage.deployTransaction.wait(6);
     await verify(simpleStorage.address, []);
   }
+
+  const currentValue = await simpleStorage.retrieveFN();
+  console.log(currentValue);
+
+  //Updating Current Value
+  const transaction = await simpleStorage.store(8);
+  await transaction.wait(1);
+  const updatedValue = await simpleStorage.retrieveFN();
+  console.log(updatedValue);
 }
 
 //Programmatically Verifying

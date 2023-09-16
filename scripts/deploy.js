@@ -23,6 +23,7 @@ async function main() {
     await verify(simpleStorage.address, []);
   }
 
+  //Intracting with Contract
   const currentValue = await simpleStorage.retrieveFN();
   console.log(currentValue);
 

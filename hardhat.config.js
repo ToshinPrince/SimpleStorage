@@ -2,7 +2,10 @@ require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 require("@nomiclabs/hardhat-etherscan");
 require("./tasks/block-number");
-require("hardhat-gas-reporter");
+//
+require("hardhat-gas-reporter"); // This plugin is used to get gas information.
+// to use solidity-coverage run yarn hardhat coverage
+require("solidity-coverage"); //This plugin given information about which line of code is covered in test and which line is not.
 
 /** @type import('hardhat/config').HardhatUserConfig */
 

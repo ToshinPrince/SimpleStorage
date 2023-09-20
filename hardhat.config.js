@@ -43,7 +43,7 @@ module.exports = {
     coinmarketcap: COINMARKETCAP_API_KEY,
     //You can mention any EVM supporting blockchian token to get gas related to that blockchain.
     //you can check more in hardhat-gas-reporter npm docs.
-    token: "MATIC",
+    // token: "MATIC",
   },
 };
 

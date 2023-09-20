@@ -68,3 +68,6 @@ module.exports = {
 //     "typechain": "^8.1.0"
 //   }
 // }
+
+// //dev Dependencies
+// "@nomiclabs/hardhat-ethers": "^2.0.4",

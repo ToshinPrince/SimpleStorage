@@ -3,9 +3,11 @@ import "dotenv/config";
 import "@nomiclabs/hardhat-etherscan";
 import "./tasks/block-number";
 import "@nomiclabs/hardhat-ethers";
+
 import "hardhat-gas-reporter"; // This plugin is used to get gas information.
 // to use solidity-coverage run yarn hardhat coverage
 import "solidity-coverage"; //This plugin given information about which line of code is covered in test and which line is not.
+import "@typechain/hardhat"; //Typechain is designed to generate TypeScript typings for your Ethereum smart contracts, making it easier to interact with them in a type-safe and convenient manner.
 
 /** @type import('hardhat/config').HardhatUserConfig */
 

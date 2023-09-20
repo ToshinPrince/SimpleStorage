@@ -1,4 +1,4 @@
-const { task } = require("hardhat/config");
+import { task } from "hardhat/config";
 
 //this is hardhat task
 //task are created inside of hardhat.config.js
@@ -7,7 +7,10 @@ const { task } = require("hardhat/config");
 // if you want to run the task run the script -> yarn hardhat block-number --network <networkname>
 //we can do same thing using scripts
 
-task("block-number", "Prints the current block number").setAction(
+export default task(
+  "block-number",
+  "Prints the current block number"
+).setAction(
   // async function blockTask(taskArgs,hre){}
   // const blockTask = async function blockTask(taskArgs,hre){}
   async (taskArgs, hre) => {
@@ -17,4 +20,4 @@ task("block-number", "Prints the current block number").setAction(
 );
 
 // exporting block-number task
-module.exports = {};
+// module.exports = {};
